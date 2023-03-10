@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Calculator</h1>
+    Insert a value</br>
+    <input id='n1' type="number"></br></br>
+    Insert another value</br>
+    <input id="n2" type="number"></br></br>
+    <button onclick='sum()'>Addition</button>
+    <button onclick='sub()'>Subtraction</button>
+    <button onclick='mult()'>Multiplication</button>
+    <button onclick='div()'>Division</button></br></br>
+    The result is: <span></span> </br>
+
+    <script>
+
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var resultado = document.querySelector('span')
+
+        function sum() {
+            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+
+        }
+
+        function sub() {
+            resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+        }
+
+        function mult() {
+            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+        }
+
+        function div(){
+            resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+        }
+
+    </script>
+
+</body>
+</html>
+
+
